@@ -1,3 +1,5 @@
+import ButtonAddMember from './ButtonAddMember/ButtonAddMember';
+import ButtonImportMember from './ButtonImportMember/ButtonImportMember';
 import styles from './managerTopBar.module.scss';
 
 const ManagerTopBar = () => {
@@ -7,9 +9,8 @@ const ManagerTopBar = () => {
         <h1>Lista członków zespołu</h1>
         <h3>Zarządzaj listą członków swojego zespołu</h3>
       </div>
-      <button className={styles.buttonAdd}>Zaimportuj członka zespołu</button>
-      <button className={styles.buttonImport}>Dodaj członka zespołu</button>
-
+      <ButtonImportMember callback={() => {}}/>
+      <ButtonAddMember callback={() => {}}/>
 		</div>
   );
 };

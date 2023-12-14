@@ -1,0 +1,24 @@
+@import '/src/styles/abstracts/mixins';
+@import '/src/styles/abstracts/variables';
+
+
+.buttonAddMemberContainer {
+    display: flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background-color: $gray-25;
+    
+    font-size: 14px;
+    text-align: justify;
+    font-weight: 500;
+    
+    & .innerFrame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+}
