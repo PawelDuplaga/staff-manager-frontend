@@ -1,0 +1,34 @@
+@import '/src/styles/abstracts/mixins';
+@import '/src/styles/abstracts/variables';
+
+
+.managertopbarContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
+}
+
+.topTitleFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex-grow: 1;
+}
+
+.buttonAdd {
+    display: flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.buttonImport {
+    display: flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
