@@ -25,7 +25,10 @@ body {
 	line-height: 1;
 }
 
-
+table {
+	padding: 0px 0px;
+	border-spacing: 0;
+}
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
 	border: none;
