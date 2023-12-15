@@ -1,0 +1,20 @@
+@import '/src/styles/abstracts/mixins';
+@import '/src/styles/abstracts/variables';
+
+
+.cellNameContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    overflow: visible;
+
+    > img {
+        object-fit: cover;
+        height: 31px;
+        width: auto;
+        aspect-ratio: 1 / 1;
+    }
+}

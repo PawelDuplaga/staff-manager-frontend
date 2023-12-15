@@ -1,85 +1,12 @@
-import React from 'react';
 import styles from './members.module.scss';
 import { membersData } from '../../testData/members';
-import {
-  ColumnDef,
-  ColumnHelper,
-  createColumnHelper,
-  flexRender,
-  getCoreRowModel,
-  getSortedRowModel,
-  SortingState,
-  useReactTable,
-} from '@tanstack/react-table'
-import { TeamMember } from '../../lib/types/TeamMember';
-
-type MembersTableProps = {
-  membersTableData: string,
-}
+import { flexRender } from '@tanstack/react-table'
+import useMembersTable from '../../utils/hooks/useMembersTable';
 
 
 const MembersTable = () => {
 
-  const [sorting, setSorting] = React.useState<SortingState>([])
-  const columnHelper = createColumnHelper<TeamMember>()
-
-  const columns = [
-    columnHelper.accessor('name', {
-      header: () => <div className={styles.cName}>NAME</div>,
-      cell: info => <div className={styles.cName}>{info.renderValue()}</div>,
-      footer: info => info.column.id,
-      size: '25%',
-    }),
-    columnHelper.accessor('email', {
-      header: () => 'Email',
-      cell: info => info.renderValue(),
-      footer: info => info.column.id,
-      size: '25%',
-    }),
-    columnHelper.accessor('phoneNumber', {
-      header: () => 'Telefon',
-      cell: info => info.renderValue(),
-      footer: info => info.column.id,
-      size: '25%',
-    }),
-    columnHelper.accessor('status', {
-      header: 'Status',
-      cell: info => info.renderValue(),
-      footer: info => info.column.id,
-      size: '5%'
-    }),
-    columnHelper.accessor('date', {
-      header: 'Data utworzenia',
-      cell: info => info.renderValue(),
-      footer: info => info.column.id,
-      size: 'min-content'
-    }),
-    columnHelper.accessor('actions', {
-      header: () => 'Actions',
-      cell: info => <button onClick={() => {}}>Action</button>,
-      footer: info => info.column.id,
-      size: 'min-content',
-      enableSorting: false
-    })
-  ]
-
-
-  // console.log(columns);
-
-  const [data, setData] = React.useState(() => membersData)
-
-  const table = useReactTable({
-    data,
-    columns,
-    state: {
-      sorting,
-    },
-    onSortingChange: setSorting,
-    getCoreRowModel: getCoreRowModel(),
-    getSortedRowModel: getSortedRowModel(),
-    debugTable: true,
-    
-  })
+  const table = useMembersTable({ membersData: membersData})
 
   return (
     <div className={styles.membersTableContainer}>

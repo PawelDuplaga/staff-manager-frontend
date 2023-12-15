@@ -4,5 +4,6 @@ export type TeamMember = {
     email: string,
     phoneNumber: string,
     date: string,
-    status: 'good' | 'bad',
+    isActive: boolean, 
+    profileImg: string
 }

@@ -1,5 +1,5 @@
-import ButtonAddMember from './ButtonAddMember/ButtonAddMember';
-import ButtonImportMember from './ButtonImportMember/ButtonImportMember';
+import ButtonAddMember from '../ButtonAddMember/ButtonAddMember';
+import ButtonImportMember from '../ButtonImportMember/ButtonImportMember';
 import styles from './managerTopBar.module.scss';
 
 const ManagerTopBar = () => {
