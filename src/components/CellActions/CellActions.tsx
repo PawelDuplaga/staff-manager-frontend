@@ -16,9 +16,11 @@ export default function CellActions() {
 
   return (
     <div className={styles.cellActionsContainer}>
-      <MdMoreVert className={styles.actionIcon} onClick={handleClick}/>
+      <MdMoreVert onClick={handleClick} className={styles.actionIcon}/>
       <Menu
-        id="basic-menu"
+        disableAutoFocusItem
+        className={styles.actionList}
+        id="action-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -26,9 +28,14 @@ export default function CellActions() {
           "aria-labelledby": "basic-button",
         }}
         transformOrigin={{ horizontal: "right", vertical: "top" }}
-        anchorOrigin={{ horizontal: 20, vertical: "bottom" }}
+        anchorOrigin={{ horizontal: 15, vertical: 25 }}
       >
-        <MenuItem onClick={handleClose}>Zablokuj</MenuItem>
+        <MenuItem
+          autoFocus={false}
+          onClick={handleClose}
+          className={styles.menuButton}
+        >Zablokuj
+        </MenuItem>
       </Menu>
     </div>
   );

@@ -3,6 +3,7 @@
 
 
 .cellActionsContainer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,4 +20,40 @@
     & :hover {
         color: $gray-400;
     }
+}
+
+.actionList {
+    :global {
+        .MuiMenu-list {
+            padding: 0;
+            border-radius: 8px;
+            background-color: transparent;
+        }
+
+        .MuiMenu-paper {
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+        }
+
+        .MuiMenuItem-root:hover {
+            background-color: $gray-25;
+        }
+
+        .MuiMenuItem-root:active {
+            background-color: $gray-15;
+            color: $text-color;
+            border: 0 0 1px 1px solid $gray-200;
+        }
+    }
+}
+
+.menuButton {
+    width: 240px;
+    min-height: auto;
+    padding: 8px 16px;
+    background-color: transparent;
+    
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: $gray-600;
 }
