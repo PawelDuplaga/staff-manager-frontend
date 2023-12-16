@@ -5,6 +5,8 @@
 .membersTableContainer {
     display: flex;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
     & table {
         text-align: left;

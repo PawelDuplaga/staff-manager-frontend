@@ -2,4 +2,21 @@
 @import '/src/styles/abstracts/variables';
 
 
-.cellActionsContainer {}
+.cellActionsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: auto;
+}
+
+.actionIcon {
+    height: 20px;
+    width: 20px;
+    color: $gray-600;
+    cursor: pointer;
+
+    & :hover {
+        color: $gray-400;
+    }
+}

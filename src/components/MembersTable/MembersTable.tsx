@@ -6,7 +6,7 @@ import useMembersTable from '../../utils/hooks/useMembersTable';
 
 const MembersTable = () => {
 
-  const table = useMembersTable({ membersData: membersData})
+  const table = useMembersTable({ membersData })
 
   return (
     <div className={styles.membersTableContainer}>
@@ -21,18 +21,9 @@ const MembersTable = () => {
                     colSpan={header.colSpan}
                     style={{ 
                       width: header.column.columnDef.size, 
-                      minWidth: header.column.columnDef.minSize }}
-                  
+                      minWidth: header.column.columnDef.minSize }}        
                   >
-                    {header.isPlaceholder ? null : (
-                      <div
-                        {...{
-                          className: header.column.getCanSort()
-                            ? 'cursor-pointer select-none'
-                            : '',
-                          onClick: header.column.getToggleSortingHandler(),
-                        }}
-                      >
+                      <div onClick={header.column.getToggleSortingHandler()}>
                         {flexRender(
                           header.column.columnDef.header,
                           header.getContext()
@@ -42,7 +33,6 @@ const MembersTable = () => {
                           desc: ' 🔽',
                         }[header.column.getIsSorted() as string] ?? null}
                       </div>
-                    )}
                   </th>
                 )
               })}

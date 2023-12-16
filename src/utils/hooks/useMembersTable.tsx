@@ -59,10 +59,10 @@ const useMembersTable = ({ membersData } : useMembersTableProps) => {
         sortingFn: 'datetime',
       }),
       columnHelper.accessor('actions', {
-        header: () => 'Actions',
-        cell: info => null,
+        header: () => <div style={{textAlign: 'center'}}>Actions</div>,
+        cell: info => <CellActions />,
         footer: info => info.column.id,
-        size: 'min-content',
+        size: '5%',
         enableSorting: false
       })
     ]
