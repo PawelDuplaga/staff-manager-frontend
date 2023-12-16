@@ -3,6 +3,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import styles from './cellActions.module.scss';
 import { MdMoreVert } from "react-icons/md";
+import ModalConfirmation from "../ModalConfirmation";
 
 export default function CellActions() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -16,6 +17,7 @@ export default function CellActions() {
 
   return (
     <div className={styles.cellActionsContainer}>
+      <ModalConfirmation />
       <MdMoreVert onClick={handleClick} className={styles.actionIcon}/>
       <Menu
         disableAutoFocusItem

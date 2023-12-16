@@ -1,2 +1,13 @@
 @import './styles/base/reset';
 @import './styles/base/typography';
+
+
+body {
+
+    & .MuiModal-root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
