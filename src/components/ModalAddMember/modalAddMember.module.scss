@@ -1,0 +1,187 @@
+@import '/src/styles/abstracts/mixins';
+@import '/src/styles/abstracts/variables';
+
+
+@import '/src/styles/abstracts/mixins';
+@import '/src/styles/abstracts/variables';
+
+
+.modalBodyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 480px;
+    padding: 16px;
+    gap: 32px;
+    border-radius: 8px;
+    background-color: $paper-color;
+    box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08);
+    
+    & button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    & .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 16px;
+    }
+    
+    & .titleSection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+
+        & .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 8px;
+    
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        & .supportTitle {
+            font-size: 14px;
+            font-weight: 400;
+            color: $text-color-light;
+            align-self: stretch;
+        }
+    }
+
+    & .formSection {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        align-self: stretch;
+        
+        & .autoForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+    
+            & .autoFormButton {
+                flex-direction: row;
+                padding: 6px;
+                gap: 8px;
+            }
+    
+            & .warning {
+                font-size: 12px;
+                font-weight: 400;
+                color: $warning-700;
+            }
+        }
+    
+        & .memberForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 445px;
+            gap: 16px;
+
+            & .inputsContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                gap: 16px;
+                padding: 0px 6px;
+        
+                & .avatarSection {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 131px;
+                    height: 131px;
+                    gap: 4px;
+                    flex-shrink: 0;
+                    border-radius: 8px;
+                    border: 1px solid $gray-200;
+                }
+
+                & .infoSection {
+                    height: 131px;
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    //Mui styling
+                    :global {
+                        .MuiInputLabel-root {
+                            font-size: 14px;
+                            font-weight: 500;
+                            font-family: Inter;
+                            color: $text-color-light;
+                        }
+
+                        .MuiInputBase-root {
+                            border-radius: 8px;
+                            height: 33px;
+                            font-size: 14px;
+                            font-weight: 500;
+
+                            & fieldset {
+                                border-color: $gray-200;
+                            }
+
+                        }
+      
+                    }
+
+                }
+            }
+        }
+    }
+
+    & .modalActions {
+        display: flex;
+        gap: 12px;
+        align-self: stretch;
+
+        & button {
+            padding: 6px 18px;
+            gap: 8px;
+            border-radius: 8px;
+            flex: 1 0 0;
+        }
+
+        & .cancelButton {
+            background-color: $paper-color;
+            border: 1px solid $gray-300;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        & .confirmButton {
+            background-color: $primary-200;
+            border: 1px solid $primary-200;
+            font-size: 14px;
+            font-weight: 600;
+            color: $paper-color;
+        }
+    }
+
+}
+
+
+.class1 {
+    width: 100%;
+    height: 20px;
+    background-color: $gray-600;
+}
