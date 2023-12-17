@@ -1,10 +1,11 @@
 import styles from './modalConfirmation.module.scss';
 import Slide from '@mui/material/Slide';
 import * as React from 'react';
-import Box from '@mui/material/Box';
+import { MdClear } from "react-icons/md";
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { MdCheckCircleOutline } from "react-icons/md";
+
 
 
 type ModalConfirmationProps = {
@@ -28,21 +29,29 @@ const ModalConfirmation = () => {
     <>
       <Button onClick={handleOpen}>Open modal</Button>
         <Modal
-          className={styles.modal}
           open={open}
           onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
+          aria-labelledby="modal-confirmation-title"
+          aria-describedby="modal-confirmation-description"
         >
           <Slide direction="up" in={open} className={styles.slide} mountOnEnter unmountOnExit>
-            <Box sx={style}>
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                Text in a modal
-              </Typography>
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-              </Typography>
-            </Box>
+            <div> 
+              <div className={styles.modalX}>
+                <div className={styles.title}>
+                  <h2>Potwierdzenie</h2>
+                  <button onClick={handleClose}>
+                    <MdClear size={24}/>
+                  </button>
+                </div>
+                <div className={styles.content}>
+                  <MdCheckCircleOutline size={20} onClick={handleClose}/>
+                  <p>Członek zespołu został zablokowany</p>
+                </div>
+                <button className={styles.hideButton} onClick={handleClose}>
+                  Ukryj
+                </button>
+              </div>
+            </div>
           </Slide>
         </Modal>
     </>
