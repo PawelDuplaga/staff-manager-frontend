@@ -25,6 +25,7 @@ const AutoMemberForm = () => {
 
   return (
 		<section className={styles.formSection}>
+
       <div className={styles.autoForm}>
         <button className={styles.autoFormButton}>
           <MdDownloading size={24}/>
@@ -41,20 +42,9 @@ const AutoMemberForm = () => {
             <InputImg />
           </div>
           <div className={styles.infoSection}>
-            <InputText 
-              type='text'
-              label='Nazwa'
-              required
-            />
-            <InputText 
-              type='email'
-              label='Adres e-mail'
-              required
-            />
-            <InputText 
-              type='text'
-              label='Numer telefonu'
-            />
+            <InputText type='text' label='Nazwa' required />
+            <InputText type='email' label='Adres e-mail' required />
+            <InputText type='text' label='Numer telefonu' />
           </div>
         </div>
         <div className={styles.modalActions}>
@@ -62,6 +52,7 @@ const AutoMemberForm = () => {
           <button type="submit" className={styles.confirmButton}>Potwierdź</button>
         </div>
       </form>
+
     </section>
   );
 };

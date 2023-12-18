@@ -9,6 +9,12 @@
     gap: 32px;
     align-self: stretch;
     
+    & button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+
     & .autoForm {
         display: flex;
         flex-direction: column;
@@ -35,7 +41,7 @@
         justify-content: flex-start;
         align-items: center;
         width: 445px;
-        gap: 16px;
+        gap: 32px;
 
         & .inputsContainer {
             display: flex;
