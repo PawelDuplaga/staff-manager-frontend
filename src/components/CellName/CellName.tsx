@@ -5,6 +5,8 @@ type CellNameProps = {
   profileImg: string,
 }
 
+//Cell component for tanstack table
+
 const CellName = ({ name, profileImg } : CellNameProps) => {
 
   return (

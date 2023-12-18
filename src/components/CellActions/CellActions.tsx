@@ -5,6 +5,9 @@ import styles from './cellActions.module.scss';
 import { MdMoreVert } from "react-icons/md";
 import ModalConfirmation from "../ModalConfirmation/ModalConfirmation";
 import ModalAddMember from "../ModalAddMember/ModalAddMember";
+import useModal from "../../utils/hooks/useModal";
+
+//Cell component for tanstack table
 
 export default function CellActions() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -16,10 +19,11 @@ export default function CellActions() {
     setAnchorEl(null);
   };
 
+  const { setOpen } = useModal({ modalType: 'addMember'});
+
+
   return (
     <div className={styles.cellActionsContainer}>
-      <ModalConfirmation />
-      <ModalAddMember />
       <MdMoreVert onClick={handleClick} className={styles.actionIcon}/>
       <Menu
         disableAutoFocusItem
@@ -36,7 +40,7 @@ export default function CellActions() {
       >
         <MenuItem
           autoFocus={false}
-          onClick={handleClose}
+          onClick={() => setOpen(true)}
           className={styles.menuButton}
         >Zablokuj
         </MenuItem>

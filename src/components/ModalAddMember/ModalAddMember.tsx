@@ -2,19 +2,19 @@ import * as React from 'react';
 import ModalTransitionWrapper from '../ModalTransitionWrapper/ModalTransitionWrapper';
 import AutoMemberForm from '../AutoMemberForm/AutoMemberForm';
 import ModalBody from '../ModalBody/ModalBody';
+import useModal from '../../utils/hooks/useModal';
+
+
 
 const ModalAddMember = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+  const {isOpen, setOpen} = useModal({ modalType: "addMember"});
 
   return (
-    <ModalTransitionWrapper handleClose={handleClose} handleOpen={handleOpen} open={open}>
+    <ModalTransitionWrapper handleClose={() => setOpen(false)} open={isOpen}>
       <ModalBody
         title="Dodawanie nowego członka zespołu"
         subtitle="Wypełnij wszystkie pola poniżej lub pobierz z internetu"
-        onClose={handleClose}
+        onClose={() => setOpen(false)}
       >
         <AutoMemberForm />
       </ModalBody>

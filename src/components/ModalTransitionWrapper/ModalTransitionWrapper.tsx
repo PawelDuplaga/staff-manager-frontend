@@ -9,19 +9,16 @@ import Modal from '@mui/material/Modal';
 type ModalTransitionWrapperProps = {
   children : React.ReactElement;
   handleClose: () => void;
-  handleOpen: () => void;
   open: boolean;
 }
 
 const ModalTransitionWrapper = ({ 
   children, 
-  handleClose, 
-  handleOpen, 
+  handleClose,
   open } : ModalTransitionWrapperProps) => {
 
   return (
     <>
-      <Button onClick={handleOpen}>Open modal</Button>
         <Modal
           open={open}
           onClose={handleClose}
