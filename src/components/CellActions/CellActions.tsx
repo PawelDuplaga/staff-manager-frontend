@@ -40,7 +40,10 @@ export default function CellActions() {
       >
         <MenuItem
           autoFocus={false}
-          onClick={() => setOpen(true)}
+          onClick={() => {
+            setAnchorEl(null);
+            setOpen(true)
+          }}
           className={styles.menuButton}
         >Zablokuj
         </MenuItem>
