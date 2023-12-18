@@ -1,0 +1,28 @@
+@import '/src/styles/abstracts/mixins';
+@import '/src/styles/abstracts/variables';
+
+
+.inputtextContainer {
+    :global {
+        .MuiInputLabel-root {
+            font-size: 12px;
+            font-weight: 500;
+            font-family: Inter;
+            color: $text-color-light;
+        }
+
+        .MuiInputBase-root {
+            border-radius: 8px;
+            height: 33px;
+            font-size: 13px;
+            font-weight: 500;
+
+            & fieldset {
+                border-color: $gray-200;
+            }
+
+        }
+    }
+}
+
+

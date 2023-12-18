@@ -35,7 +35,9 @@ const ModalTransitionWrapper = ({
             mountOnEnter 
             unmountOnExit
           >
-            {children}
+            <div>
+              {children}
+            </div>
           </Slide>
         </Modal>
     </>

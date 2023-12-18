@@ -18,7 +18,6 @@ const ModalConfirmation = () => {
   return (
     <ModalTransitionWrapper handleClose={handleClose} handleOpen={handleOpen} open={open}>
       {/* this div is getting swapped / deleted after Wrapping it into <Slide></Slide> ?? why */}
-      <div> 
         <div className={styles.modalX}>
           <div className={styles.title}>
             <h2>Potwierdzenie</h2>
@@ -34,7 +33,6 @@ const ModalConfirmation = () => {
             Ukryj
           </button>
         </div>
-      </div>
     </ModalTransitionWrapper>
   );
 }
